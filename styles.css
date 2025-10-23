@@ -86,28 +86,56 @@ section {
     padding:50px 20px;
     text-align:center;
 }
-/* ======= Hero Section Responsive ======= */
-@media(max-width:768px){
+/* Hero Section */
+.hero-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: #fff;
+    padding: 50px 30px;   
+    border-radius: 20px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+    max-width: 1000px;    
+    margin: 50px auto;    
+}
+
+.hero-card img {
+    width: 150px;  
+    height: 150px;
+    margin-bottom: 0;   /* لا تغير شيء */
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;  
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;  
+    line-height: 1.8;
+}
+
+/* ======= Responsive for small screens ======= */
+@media (max-width: 768px) {
     .hero-card {
-        flex-direction: column;  /* ترتيب عمودي */
-        text-align: center;      /* توسيط النص */
-        padding: 30px 20px;      /* تقليل الحشو قليلاً للجوال */
-        gap: 20px;               /* تقليل الفراغ بين الصورة والنص */
+        max-width: 95%;       /* يقلل عرض البطاقة لتناسب الجوال */
+        padding: 30px 20px;   
+        gap: 20px;            
+        /* لا نغير flex-direction أو text-align */
     }
 
     .hero-card img {
-        width: 150px;            /* تصغير الشعار للجوال */
-        height: 150px;
-        margin-bottom: 15px;
+        width: 100px;         /* تصغير الشعار قليلاً */
+        height: auto;         /* يحافظ على نسبة الصورة */
     }
 
     .hero-text h1 {
-        font-size: 1.8rem;       /* تصغير العنوان */
+        font-size: 1.8rem;    
     }
 
     .hero-text p {
-        font-size: 1rem;         /* تصغير النص */
-        line-height: 1.6;
+        font-size: 1rem;       
+        line-height: 1.5;
     }
 }
 
