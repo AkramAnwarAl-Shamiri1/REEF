@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>من نحن - مؤسسة ريف</title>
+<link rel="stylesheet" href="styles.css">
+<!-- FontAwesome لأي أيقونات -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<!-- Leaflet للخريطة -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<!-- Google Charts -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+
+
+<!-- ======= Header ======= -->
+<header>
+    <div class="header-container">
+        <img src="ccc.jpg" alt="شعار المؤسسة" class="logo">
+        <ul class="nav-links">
+            <li><a href="#" class="active">الرئيسية</a></li>
+            <li><a href="#">من نحن</a></li>
+            <li><a href="#">المشاريع</a></li>
+            <li><a href="#">شركاؤنا</a></li>
+            <li><a href="#">الأخبار</a></li>
+            <li><a href="#">التواصل</a></li>
+        </ul>
+        <div class="donate-btn">
+            <button>
+                تبرع الآن
+               
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section id="hero" class="hero">
+    <div class="hero-card">
+        <img src="ccc.jpg" alt="شعار المؤسسة" class="logo">
+        <div class="hero-text">
+            <h1>مؤسسة ريف</h1>
+            <p>مؤسسة ريف تعمل على تعزيز التنمية المجتمعية والاستدامة البيئية، ملتزمة بدعم المجتمعات المحلية وتحقيق أثر إيجابي مستدام.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Cards Section -->
+<section id="cards" class="cards">
+    <div class="card">
+        <i class="fas fa-eye fa-3x"></i>
+        <h3>رؤيتنا</h3>
+        <p>نسعى إلى مجتمع مستدام ومزدهر، قادر على مواجهة التحديات البيئية والاجتماعية.</p>
+    </div>
+    <div class="card">
+        <i class="fas fa-rocket fa-3x"></i>
+        <h3>رسالتنا</h3>
+        <p>تقديم برامج تنموية مستدامة، ودعم المبادرات المحلية، وتعزيز قدرات المجتمع من خلال التعليم والتدريب.</p>
+    </div>
+    <div class="card">
+        <i class="fas fa-gem fa-3x"></i>
+        <h3>قيمنا</h3>
+        <p>الشفافية، المسؤولية، التعاون، الابتكار، الاستدامة.</p>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section id="team">
+    <h2>الفريق التنفيذي وفريق القيادة</h2>
+   <div class="team">
+        <div class="member"><img src="ima.jpg" alt="عضو الفريق"></div>
+        <div class="member"><img src="ima.jpg" alt="عضو الفريق"></div>
+        <div class="member"><img src="ima.jpg" alt="عضو الفريق"></div>
+    </div> 
+</section>
+
+<!-- Org Chart Section -->
+<!-- Org Chart Section -->
+<section id="org">
+    <h2>الهيكل التنظيمي</h2>
+    <div class="org-container">
+        <div id="org-chart"></div>
+        <div class="zoom-controls">
+            <button id="zoomIn">+</button>
+            <button id="zoomOut">−</button>
+        </div>
+    </div>
+    <p id="no-chart" style="display:none; text-align:center;">المخطط غير متوفر مؤقتًا.</p>
+</section>
+
+
+
+
+<!-- Offices Map -->
+<section id="offices">
+    <h2>مواقع المكاتب</h2>
+    <div id="map" style="height:400px;"></div>
+    <p id="no-offices" style="display:none;">لا توجد مكاتب متاحة حاليًا.</p>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>مؤسسة ريف</h3>
+            <p>نعمل على دعم التنمية المجتمعية والاستدامة البيئية.</p>
+        </div>
+        <div class="footer-column">
+            <nav>
+                <ul>
+                    <li><a href="#hero">عن المؤسسة</a></li>
+                    <li><a href="#cards">رؤية ورسالة وقيم</a></li>
+                    <li><a href="#team">الفريق التنفيذي</a></li>
+                    <li><a href="#org">الهيكل التنظيمي</a></li>
+                    <li><a href="#offices">مواقع المكاتب</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-column">
+            <h3>تواصل معنا</h3>
+            <p>الهاتف: 0123456789</p>
+            <p>البريد الإلكتروني: info@reef.org</p>
+            <p>العنوان: شارع التنمية، العاصمة</p>
+        </div>
+    </div>
+    <p class="footer-bottom">© 2025 جميع الحقوق محفوظة لمؤسسة ريف</p>
+</footer>
+
+<!-- ======= Scripts ======= -->
+<script>
+google.charts.load('current', {packages:["orgchart"]});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+  const data = new google.visualization.DataTable();
+  data.addColumn('string', 'Name');
+  data.addColumn('string', 'Manager');
+  data.addColumn('string', 'ToolTip');
+
+  // بيانات المخطط
+  data.addRows([
+    [{v:'CEO', f:'<div class="org-node">المدير العام</div>'}, '', ''],
+    [{v:'Finance', f:'<div class="org-node">الإدارة المالية</div>'}, 'CEO', ''],
+    [{v:'Projects', f:'<div class="org-node">إدارة المشاريع</div>'}, 'CEO', ''],
+    [{v:'HR', f:'<div class="org-node">الموارد البشرية</div>'}, 'CEO', ''],
+    [{v:'Field', f:'<div class="org-node">الفرق الميدانية</div>'}, 'Projects', '']
+  ]);
+
+  const chart = new google.visualization.OrgChart(document.getElementById('org-chart'));
+  chart.draw(data, {allowHtml:true});
+}
+
+// Zoom controls
+let zoomLevel = 1;
+document.getElementById('zoomIn').addEventListener('click', () => {
+  zoomLevel += 0.1;
+  document.getElementById('org-chart').style.transform = `scale(${zoomLevel})`;
+  document.getElementById('org-chart').style.transformOrigin = 'center';
+});
+
+document.getElementById('zoomOut').addEventListener('click', () => {
+  zoomLevel = Math.max(0.5, zoomLevel - 0.1);
+  document.getElementById('org-chart').style.transform = `scale(${zoomLevel})`;
+  document.getElementById('org-chart').style.transformOrigin = 'center';
+});
+
+// خريطة Leaflet
+const map = L.map('map').setView([15.3694, 44.1910], 6);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom:18}).addTo(map);
+
+const offices = [
+  {lat:15.3694,lng:44.1910,title:"مكتب صنعاء",address:"صنعاء",phone:"012345678",email:"info@reef.org",hours:"9AM-5PM"}
+];
+
+if(offices.length===0){
+    document.getElementById('map').style.display='none';
+    document.getElementById('no-offices').style.display='block';
+} else {
+    offices.forEach(o=>{
+        L.marker([o.lat,o.lng]).addTo(map)
+        .bindPopup(`<b>${o.title}</b><br>${o.address}<br>الهاتف: ${o.phone}<br>البريد: ${o.email}<br>ساعات العمل: ${o.hours}`);
+    });
+}
+</script>
+
+</body>
+</html>
