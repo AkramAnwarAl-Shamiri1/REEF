@@ -1,206 +1,479 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>من نحن - مؤسسة ريف</title>
-<link rel="stylesheet" href="styles.css">
-<!-- FontAwesome لأي أيقونات -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-<!-- Leaflet للخريطة -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<!-- Google Charts -->
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-</head>
-<body>
+<html class="light" dir="rtl" lang="ar" style="scroll-behavior: smooth;"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>قصص النجاح</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet"/>
 
 
-<!-- ======= Header ======= -->
-
- <header>
-    <div class="header-container">
-        <img src="ccc.jpg" alt="شعار المؤسسة" class="logo">
-
-        <!-- زر الهامبرغر -->
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <ul class="nav-links">
-         <li><a href="#">الرئيسية</a></li>
-
-            <li><a href="#">من نحن</a></li>
-            <li><a href="#">المشاريع</a></li>
-            <li><a href="#">شركاؤنا</a></li>
-            <li><a href="#">الأخبار</a></li>
-            <li><a href="#">التواصل</a></li>
-        </ul>
-
-        <div class="donate-btn">
-            <button>تبرع الآن</button>
-        </div>
-    </div>
-</header>
-
-<!-- Hero Section -->
-<section id="hero" class="hero">
-    <div class="hero-card">
-        <img src="ccc.jpg" alt="شعار المؤسسة" class="logo">
-        <div class="hero-text">
-            <h1>مؤسسة ريف</h1>
-            <p>مؤسسة ريف تعمل على تعزيز التنمية المجتمعية والاستدامة البيئية، ملتزمة بدعم المجتمعات المحلية وتحقيق أثر إيجابي مستدام.</p>
-        </div>
-    </div>
-</section>
-
-<!-- Cards Section -->
-<section id="cards" class="cards">
-    <div class="card">
-        <i class="fas fa-eye fa-3x"></i>
-        <h3>رؤيتنا</h3>
-        <p>نسعى إلى مجتمع مستدام ومزدهر، قادر على مواجهة التحديات البيئية والاجتماعية.</p>
-    </div>
-    <div class="card">
-        <i class="fas fa-rocket fa-3x"></i>
-        <h3>رسالتنا</h3>
-        <p>تقديم برامج تنموية مستدامة، ودعم المبادرات المحلية، وتعزيز قدرات المجتمع من خلال التعليم والتدريب.</p>
-    </div>
-    <div class="card">
-        <i class="fas fa-gem fa-3x"></i>
-        <h3>قيمنا</h3>
-        <p>الشفافية، المسؤولية، التعاون، الابتكار، الاستدامة.</p>
-    </div>
-</section>
-
-<!-- Team Section -->
-<section id="team">
-    <h2>الفريق التنفيذي وفريق القيادة</h2>
-   <div class="team">
-        <div class="member"><img src="ima.jpg" alt="عضو الفريق"></div>
-        <div class="member"><img src="ima.jpg" alt="عضو الفريق"></div>
-        <div class="member"><img src="ima.jpg" alt="عضو الفريق"></div>
-    </div> 
-</section>
-
-<!-- Org Chart Section -->
-<!-- Org Chart Section -->
-<section id="org">
-    <h2>الهيكل التنظيمي</h2>
-    <div class="org-container">
-        <div id="org-chart"></div>
-        <div class="zoom-controls">
-            <button id="zoomIn">+</button>
-            <button id="zoomOut">−</button>
-        </div>
-    </div>
-    <p id="no-chart" style="display:none; text-align:center;">المخطط غير متوفر مؤقتًا.</p>
-</section>
-
-
-
-
-<!-- Offices Map -->
-<section id="offices">
-    <h2>مواقع المكاتب</h2>
-    <div id="map" style="height:400px;"></div>
-    <p id="no-offices" style="display:none;">لا توجد مكاتب متاحة حاليًا.</p>
-</section>
-
-<!-- Footer -->
-<footer>
-    <div class="footer-container">
-        <div class="footer-column">
-            <h3>مؤسسة ريف</h3>
-            <p>نعمل على دعم التنمية المجتمعية والاستدامة البيئية.</p>
-        </div>
-        <div class="footer-column">
-            <nav>
-                <ul>
-                    <li><a href="#hero">عن المؤسسة</a></li>
-                    <li><a href="#cards">رؤية ورسالة وقيم</a></li>
-                    <li><a href="#team">الفريق التنفيذي</a></li>
-                    <li><a href="#org">الهيكل التنظيمي</a></li>
-                    <li><a href="#offices">مواقع المكاتب</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="footer-column">
-            <h3>تواصل معنا</h3>
-            <p>الهاتف: 0123456789</p>
-            <p>البريد الإلكتروني: info@reef.org</p>
-            <p>العنوان: شارع التنمية، العاصمة</p>
-        </div>
-    </div>
-    <p class="footer-bottom">© 2025 جميع الحقوق محفوظة لمؤسسة ريف</p>
-</footer>
-
-<!-- ======= Scripts ======= -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<style type="text/tailwindcss">
+    @layer utilities {
+      .fade-in-up {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+      .fade-in {
+        opacity: 0;
+        animation: fadeIn 0.5s ease-out forwards;
+      }
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+      .animate-on-scroll.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .story-card-hover {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+      .story-card-hover:hover {
+        transform: scale(1.05) translateY(-8px);
+        box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);}
+      .filtering-transition {
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+      }
+      .preloader-fade-out {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+      }
+      .preloader-spinner {
+        border: 4px solid rgba(212, 175, 55, 0.2);
+        border-top-color: #D4AF37;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+       .no-results-enter {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      .no-results-enter-active {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      }
+      .no-results-leave {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .no-results-leave-active {
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+      }
+      .icon-pulse {
+        animation: pulse-icon 2s infinite ease-in-out;
+      }
+       @keyframes pulse-icon {
+        0%, 100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+      }
+      .lazy-image {
+        background-color: #f0f2f5;
+        transition: opacity 0.5s ease-in-out;
+        opacity: 0;
+      }
+      .lazy-image[src] {
+        opacity: 1;
+      }
+      .dark .lazy-image {
+        background-color: #1a2632;
+      }
+      ::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+      }
+      ::-webkit-scrollbar-track {
+        background-color: #f0f2f5;
+        border-radius: 10px;
+      }
+      .dark ::-webkit-scrollbar-track {
+        background-color: #1a2632;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #285430;border-radius: 10px;
+        border: 2px solid #f0f2f5;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background-color: #D4AF37;border: 2px solid #1a2632;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #D4AF37;}
+      .dark ::-webkit-scrollbar-thumb:hover {
+        background-color: #285430;}
+      ::-webkit-scrollbar-corner {
+        background: transparent;
+      }
+    }
+  </style>
 <script>
-google.charts.load('current', {packages:["orgchart"]});
-google.charts.setOnLoadCallback(drawChart);
-
-function drawChart() {
-  const data = new google.visualization.DataTable();
-  data.addColumn('string', 'Name');
-  data.addColumn('string', 'Manager');
-  data.addColumn('string', 'ToolTip');
-
-  // بيانات المخطط
-  data.addRows([
-    [{v:'CEO', f:'<div class="org-node">المدير العام</div>'}, '', ''],
-    [{v:'Finance', f:'<div class="org-node">الإدارة المالية</div>'}, 'CEO', ''],
-    [{v:'Projects', f:'<div class="org-node">إدارة المشاريع</div>'}, 'CEO', ''],
-    [{v:'HR', f:'<div class="org-node">الموارد البشرية</div>'}, 'CEO', ''],
-    [{v:'Field', f:'<div class="org-node">الفرق الميدانية</div>'}, 'Projects', '']
-  ]);
-
-  const chart = new google.visualization.OrgChart(document.getElementById('org-chart'));
-  chart.draw(data, {allowHtml:true});
+ 
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+     fontFamily: {
+    display: ["Tajawal", "system-ui", "sans-serif"],
+    body: ["Tajawal", "system-ui", "sans-serif"]
 }
 
-// Zoom controls
-let zoomLevel = 1;
-document.getElementById('zoomIn').addEventListener('click', () => {
-  zoomLevel += 0.1;
-  document.getElementById('org-chart').style.transform = `scale(${zoomLevel})`;
-  document.getElementById('org-chart').style.transformOrigin = 'center';
-});
+    },
+  },
+}
 
-document.getElementById('zoomOut').addEventListener('click', () => {
-  zoomLevel = Math.max(0.5, zoomLevel - 0.1);
-  document.getElementById('org-chart').style.transform = `scale(${zoomLevel})`;
-  document.getElementById('org-chart').style.transformOrigin = 'center';
-});
 
-// خريطة Leaflet
-const map = L.map('map').setView([15.3694, 44.1910], 6);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom:18}).addTo(map);
-
-const offices = [
-  {lat:15.3694,lng:44.1910,title:"مكتب صنعاء",address:"صنعاء",phone:"012345678",email:"info@reef.org",hours:"9AM-5PM"}
-];
-
-if(offices.length===0){
-    document.getElementById('map').style.display='none';
-    document.getElementById('no-offices').style.display='block';
-} else {
-    offices.forEach(o=>{
-        L.marker([o.lat,o.lng]).addTo(map)
-        .bindPopup(`<b>${o.title}</b><br>${o.address}<br>الهاتف: ${o.phone}<br>البريد: ${o.email}<br>ساعات العمل: ${o.hours}`);
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#285430",
+            "accent": "#D4AF37",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101922",
+          },
+         
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          boxShadow: {
+            'lg-refined': '0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+            '2xl-refined': '0 25px 50px -12px rgba(0, 0, 0, 0.2)',
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="fixed inset-0 bg-background-light dark:bg-background-dark z-[100] flex flex-col items-center justify-center transition-opacity duration-500" id="preloader">
+<div class="preloader-spinner h-16 w-16 rounded-full"></div>
+<p class="mt-4 text-primary dark:text-gray-300 text-lg">جاري التحميل...</p>
+</div>
+<div @scroll.window="showBackToTop = (window.pageYOffset &gt; 400) ? true : false" class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden" id="page-top" x-data="{ openCategory: false, openDate: false, showNotification: false, showBackToTop: false }">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-gray-200 dark:border-b-gray-700 px-10 py-3 bg-white/80 dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-50 transition-all duration-300">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-4 text-gray-900 dark:text-white" href="#">
+<div class="size-10 text-primary">
+<img alt="Reef Organization Logo" class="h-full w-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeuQY6T0Q54E_orNXyRH4JCqau50_5T5XtswYDZG9YwF7HmWzLXY4LGfnA24a0TZvlbxE9rqYX_qWst0yfy6ZR9ZX01huT34qCrKtDc9Y6SwwbRCThzCXAcPG404lZSAQtM4sAkNG3beypHD7Po3EPQaJpqxwrYTZDlj2TxG_Gah30mDFypppe13C8ncd2XfjlEQ5JNBJ7414MM6tpFzi-svfcU3-UDWzeyEZDJmX9tsYSN0fzHB_N_2aYOtm74j2_ewvGJr6M8ifv"/>
+</div>
+<h2 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">منظمة ريف</h2>
+</a>
+<div class="flex items-center gap-9">
+<a class="text-gray-900 dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">الرئيسية</a>
+<a class="text-gray-900 dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">من نحن</a>
+<a aria-current="page" class="text-primary dark:text-primary text-sm font-medium leading-normal" href="#">قصص النجاح</a>
+<a class="text-gray-900 dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">اتصل بنا</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-accent text-primary text-sm font-bold leading-[normal] tracking-[0.015em] hover:bg-accent/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 dark:focus-visible:ring-offset-background-dark transition-all duration-300 transform active:scale-95">
+<span class="truncate">تبرع</span>
+</button>
+</div>
+</header>
+<main class="flex-1 px-4 sm:px-6 lg:px-8 py-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col gap-8">
+<div class="text-center fade-in-up" style="animation-delay: 0.1s;">
+<h1 class="text-gray-900 dark:text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] mb-2">قصص نجاح <span class="text-primary">ريف</span></h1>
+<p class="text-gray-500 dark:text-gray-400 text-lg font-normal leading-normal">اكتشف كيف نصنع فرقًا في المجتمع.</p>
+</div>
+<div class="bg-white dark:bg-background-dark p-4 rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg-refined fade-in-up" style="animation-delay: 0.3s;" x-data="{ selectedCategory: 'كل الفئات', selectedDate: 'كل الأوقات', searchTerm: '' }">
+<div class="flex flex-wrap items-end justify-between gap-4">
+<div class="flex items-end gap-4 flex-wrap flex-1">
+<div class="relative min-w-[200px] flex-1" x-data="{ open: false }">
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 text-right" for="category-filter">الفئة</label>
+<button @click="open = !open" class="flex items-center justify-between w-full h-10 px-3 text-right rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark transition-all duration-300 z-10">
+<span x-text="selectedCategory"></span>
+<i :class="{ 'rotate-180': open }" class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+</button>
+<div @click.away="open = false" class="absolute z-50 mt-2 w-full rounded-md bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-700" style="display: none;" x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-end="transform opacity-100 scale-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:leave="transition ease-in duration-75" x-transition:leave-end="transform opacity-0 scale-95" x-transition:leave-start="transform opacity-100 scale-100">
+<a @click.prevent="selectedCategory = 'كل الفئات'; open = false; filterStories(selectedCategory, selectedDate, searchTerm)" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer" href="#">كل الفئات</a>
+<a @click.prevent="selectedCategory = 'التأثير المجتمعي'; open = false; filterStories(selectedCategory, selectedDate, searchTerm)" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer" href="#">التأثير المجتمعي</a>
+<a @click.prevent="selectedCategory = 'الابتكار'; open = false; filterStories(selectedCategory, selectedDate, searchTerm)" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer" href="#">الابتكار</a>
+<a @click.prevent="selectedCategory = 'نجاح العميل'; open = false; filterStories(selectedCategory, selectedDate, searchTerm)" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer" href="#">نجاح العميل</a>
+</div>
+</div>
+<div class="relative min-w-[200px] flex-1" x-data="{ open: false }">
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 text-right" for="date-filter">التاريخ</label>
+<button @click="open = !open" class="flex items-center justify-between w-full h-10 px-3 text-right rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark transition-all duration-300 z-10">
+<span x-text="selectedDate"></span>
+<i class="fas fa-calendar-alt text-gray-500"></i>
+</button>
+<div @click.away="open = false" class="absolute z-50 mt-2 w-full rounded-md bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-700" style="display: none;" x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-end="transform opacity-100 scale-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:leave="transition ease-in duration-75" x-transition:leave-end="transform opacity-0 scale-95" x-transition:leave-start="transform opacity-100 scale-100">
+<a @click.prevent="selectedDate = 'كل الأوقات'; open = false; filterStories(selectedCategory, selectedDate, searchTerm)" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer" href="#">كل الأوقات</a>
+<a @click.prevent="selectedDate = 'آخر شهر'; open = false; filterStories(selectedCategory, selectedDate, searchTerm)" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer" href="#">آخر شهر</a>
+<a @click.prevent="selectedDate = 'آخر 3 أشهر'; open = false; filterStories(selectedCategory, selectedDate, searchTerm)" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer" href="#">آخر 3 أشهر</a>
+<a @click.prevent="selectedDate = 'آخر سنة'; open = false; filterStories(selectedCategory, selectedDate, searchTerm)" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer" href="#">آخر سنة</a>
+</div>
+</div>
+<div class="relative min-w-[200px] flex-1">
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 text-right" for="search-stories">بحث</label>
+<div class="relative">
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+<i class="fas fa-search text-gray-400"></i>
+</div>
+<input @input.debounce.300ms="searchTerm = $event.target.value; filterStories(selectedCategory, selectedDate, searchTerm)" class="block w-full rounded-lg border-gray-200 dark:border-gray-600 bg-gray-100 dark:bg-gray-800 pr-10 pl-3 py-2 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent dark:focus:ring-offset-background-dark sm:text-sm text-right transition-all duration-300 h-10" id="search-stories" name="search-stories" placeholder="ابحث في القصص..." type="text" x-model="searchTerm"/>
+</div>
+</div>
+</div>
+<button @click="selectedCategory = 'كل الفئات'; selectedDate = 'كل الأوقات'; searchTerm = ''; filterStories(selectedCategory, selectedDate, searchTerm); showNotification = true; setTimeout(() =&gt; showNotification = false, 3000);" class="flex-shrink-0 flex items-center justify-center h-10 px-4 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm font-semibold hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-300 transform active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark">
+<i class="fas fa-undo mr-2"></i>
+<span>إعادة تعيين الفلاتر</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-right fade-in-up" id="stories-grid" style="animation-delay: 0.5s;">
+<div class="bg-white dark:bg-background-dark rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg-refined story-card-hover group flex flex-col overflow-hidden animate-on-scroll filtering-transition" data-category="التأثير المجتمعي" data-date="2023-10-15" data-summary="قدمت مبادرتنا الجديدة لأكثر من 200 طالب من المحرومين المهارات الأساسية في البرمجة، مما يفتح الأبواب أمام فرص مستقبلية في صناعة التكنولوجيا." data-title="تمكين الشباب المحلي من خلال تعليم التكنولوجيا">
+<div class="relative">
+<img alt="مجموعة متنوعة من الشباب يشاركون في فصل دراسي للبرمجة، ويركزون على أجهزة الكمبيوتر المحمولة." class="rounded-t-xl w-full h-48 object-cover lazy-image" data-src="c1.PNG" loading="lazy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-300 group-hover:from-black/80"></div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-3">
+<span class="inline-block bg-green-100 text-primary text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-green-900/50 dark:text-green-300">التأثير المجتمعي</span>
+<p class="text-sm text-gray-500 dark:text-gray-400">15 أكتوبر 2023</p>
+</div>
+<h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-accent dark:group-hover:text-accent transition-colors flex-grow">تمكين الشباب المحلي من خلال تعليم التكنولوجيا</h4>
+<p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed mb-4">قدمت مبادرتنا الجديدة لأكثر من 200 طالب من المحرومين المهارات الأساسية في البرمجة، مما يفتح الأبواب أمام فرص مستقبلية في صناعة التكنولوجيا.</p>
+<a class="mt-auto text-primary dark:text-green-300 font-semibold text-sm hover:underline self-start group-hover:translate-x-1 transition-transform duration-300 ease-out group-hover:text-accent dark:group-hover:text-accent" href="story-details-1.html">التفاصيل <i class="fas fa-arrow-left text-sm align-middle transform group-hover:-rotate-45 transition-transform"></i></a>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg-refined story-card-hover group flex flex-col overflow-hidden animate-on-scroll filtering-transition" data-category="الابتكار" data-date="2023-09-28" data-summary="لقد قمنا بتطوير نظام ترشيح مياه منخفض التكلفة، يتم نشره الآن في 15 مجتمعًا ريفيًا، مما يوفر مياه شرب نظيفة وآمنة لأكثر من 10000 شخص." data-title="إحداث ثورة في الوصول إلى المياه النظيفة">
+<div class="relative">
+<img alt="صورة مقربة لنظام ترشيح المياه المبتكر أثناء العمل في قرية ريفية، مع تدفق المياه النظيفة." class="rounded-t-xl w-full h-48 object-cover lazy-image" data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc8Bn0pZxcUSXJ88ZYS6fnEvNaLtLEPDKyjJKiEFVVgFYvGNc-Pi7OIRBycEBbyTcwnQ3hefZ0osLAkaZdy-3yrWDdhIvLKIlVu1OK7a1bff3DsyqKvzkKQ4K7ij1H0iIeAjj9lMweLchllquKfODHTeud7Lv5pwdECP__ukCV34l0ddTQiturdMI9c21j1261mp3Ul_JfB0X9fk3jbtCQfZsP0WGaKVxQy28-hW0iglgYmO4QFLCp11ZeUI8Mc3xZuEFGeWWQoWHF" loading="lazy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-300 group-hover:from-black/80"></div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-3">
+<span class="inline-block bg-green-100 text-primary text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-green-900/50 dark:text-green-300">الابتكار</span>
+<p class="text-sm text-gray-500 dark:text-gray-400">28 سبتمبر 2023</p>
+</div>
+<h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-accent dark:group-hover:text-accent transition-colors flex-grow">إحداث ثورة في الوصول إلى المياه النظيفة</h4>
+<p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed mb-4">لقد قمنا بتطوير نظام ترشيح مياه منخفض التكلفة، يتم نشره الآن في 15 مجتمعًا ريفيًا، مما يوفر مياه شرب نظيفة وآمنة لأكثر من 10000 شخص.</p>
+<a class="mt-auto text-primary dark:text-green-300 font-semibold text-sm hover:underline self-start group-hover:translate-x-1 transition-transform duration-300 ease-out group-hover:text-accent dark:group-hover:text-accent" href="story-details-2.html">التفاصيل <i class="fas fa-arrow-left text-sm align-middle transform group-hover:-rotate-45 transition-transform"></i></a>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg-refined story-card-hover group flex flex-col overflow-hidden animate-on-scroll filtering-transition" data-category="نجاح العميل" data-date="2023-09-05" data-summary="من خلال برنامج الدعم الشامل الذي نقدمه، انتقلت عائلة مكونة من أربعة أفراد من ملجأ إلى امتلاك منزلهم الأول في 18 شهرًا فقط." data-title="من التشرد إلى امتلاك منزل">
+<div class="relative">
+<img alt="صورة لعائلة سعيدة تتلقى مفاتيح منزلها الجديد من ممثل منظمة ريف." class="rounded-t-xl w-full h-48 object-cover lazy-image" data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY7mwAGncKFUD5i1H1jNcmqUHagctST3bpT5aQujMrDk6OUa0TqV3GqEYHtuMHfBXWfqGXxNkqKOszD1g-RU5BN0KFs2zrlglwSG9KoemxJ7xiYPFARpg6At1rgPVCp7okCUJcAjB5gd0at70k5Qmsp3-cjh9GlZZT94OgJMCNDqhggksU75BP4FroopLxE6luop-VYPmo-kGwx_d6JthAZZqjfX4tFnexm1tmF2ivedT1StnQHPDk2bzVczey1Disb56FjRto_hPk" loading="lazy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-300 group-hover:from-black/80"></div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-3">
+<span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-yellow-900/50 dark:text-yellow-300">نجاح العميل</span>
+<p class="text-sm text-gray-500 dark:text-gray-400">05 سبتمبر 2023</p>
+</div>
+<h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-accent dark:group-hover:text-accent transition-colors flex-grow">من التشرد إلى امتلاك منزل</h4>
+<p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed mb-4">من خلال برنامج الدعم الشامل الذي نقدمه، انتقلت عائلة مكونة من أربعة أفراد من ملجأ إلى امتلاك منزلهم الأول في 18 شهرًا فقط.</p>
+<a class="mt-auto text-primary dark:text-green-300 font-semibold text-sm hover:underline self-start group-hover:translate-x-1 transition-transform duration-300 ease-out group-hover:text-accent dark:group-hover:text-accent" href="story-details-3.html">التفاصيل <i class="fas fa-arrow-left text-sm align-middle transform group-hover:-rotate-45 transition-transform"></i></a>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg-refined story-card-hover group flex flex-col overflow-hidden animate-on-scroll filtering-transition" data-category="التأثير المجتمعي" data-date="2023-08-21" data-summary="جمعت حملة الغذاء لهذا العام أكثر من 50 طنًا من المواد غير القابلة للتلف، مما يضمن تزويد بنوك الطعام المحلية لموسم الشتاء القادم." data-title="حملة الغذاء السنوية تحطم جميع الأرقام القياسية">
+<div class="relative">
+<img alt="لقطة جوية لمستودع مليء بالمتطوعين الذين ينظمون كمية هائلة من التبرعات الغذائية." class="rounded-t-xl w-full h-48 object-cover lazy-image" data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFg3x-XtBMqN8TUDfXoVBzt3CQ2mV544KaPM9MK_-m8yyIRtTBdBcEoTcZQ0DEToTF_HKAliN-mphQGRpBve3RObYUD9OkUqkICGYAfn8lyBqtgm0D9JBXEYJVStvhagFUxXqlTET9Holohv_L2EN3Gn8N99iFOrnZ5YvpmFFycY9wvs_DFW-KCgcxaDAj4KXyetDlugl_DQQlTEIJmYvQ-2RHNJXZCEQOMQk6JfgaDJ16SgO63e100I0ylp0ImcmQyZYJy7HrFt_8" loading="lazy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-300 group-hover:from-black/80"></div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-3">
+<span class="inline-block bg-green-100 text-primary text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-green-900/50 dark:text-green-300">التأثير المجتمعي</span>
+<p class="text-sm text-gray-500 dark:text-gray-400">21 أغسطس 2023</p>
+</div>
+<h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-accent dark:group-hover:text-accent transition-colors flex-grow">حملة الغذاء السنوية تحطم جميع الأرقام القياسية</h4>
+<p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed mb-4">جمعت حملة الغذاء لهذا العام أكثر من 50 طنًا من المواد غير القابلة للتلف، مما يضمن تزويد بنوك الطعام المحلية لموسم الشتاء القادم.</p>
+<a class="mt-auto text-primary dark:text-green-300 font-semibold text-sm hover:underline self-start group-hover:translate-x-1 transition-transform duration-300 ease-out group-hover:text-accent dark:group-hover:text-accent" href="story-details-4.html">التفاصيل <i class="fas fa-arrow-left text-sm align-middle transform group-hover:-rotate-45 transition-transform"></i></a>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg-refined story-card-hover group flex flex-col overflow-hidden animate-on-scroll filtering-transition" data-category="الابتكار" data-date="2023-07-10" data-summary="أدى تدريبنا على الزراعة العضوية إلى زيادة غلة المحاصيل بنسبة 40% للمزارعين المحليين، مما عزز الأمن الغذائي والدخل في المنطقة." data-title="الممارسات الزراعية المستدامة تؤتي ثمارها">
+<div class="relative">
+<img alt="صورة لمزارع يقف بفخر في حقله، ويعرض محاصيل عضوية وفيرة نتيجة للممارسات المستدامة." class="rounded-t-xl w-full h-48 object-cover lazy-image" data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyVovbN8FH0kTNb2fucc_xxSfcHMFwgQCkkqxR705aUJ2mYkVVGWilFcVzbZccIhStzGBbG5HTsu5ZJDtlpfOiWTKcQB3x7NkRGvn4yxqeYJKvbLHZI04des7uC9G0rwoD8UpZClFMcLszKxbLUOVKrEWkMJcSxtd4FhtlOnYfvXGbtushnMVTKjrDS_SpBXuWxjeTskApdOSBVcMYkX_K5AA6L_5rKbDqs_4M3T5m9uylN-L_HLxCPfU6UCtS0qQgx94hSCxJIrII" loading="lazy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-300 group-hover:from-black/80"></div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-3">
+<span class="inline-block bg-green-100 text-primary text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-green-900/50 dark:text-green-300">الابتكار</span>
+<p class="text-sm text-gray-500 dark:text-gray-400">10 يوليو 2023</p>
+</div>
+<h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-accent dark:group-hover:text-accent transition-colors flex-grow">الممارسات الزراعية المستدامة تؤتي ثمارها</h4>
+<p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed mb-4">أدى تدريبنا على الزراعة العضوية إلى زيادة غلة المحاصيل بنسبة 40% للمزارعين المحليين، مما عزز الأمن الغذائي والدخل في المنطقة.</p>
+<a class="mt-auto text-primary dark:text-green-300 font-semibold text-sm hover:underline self-start group-hover:translate-x-1 transition-transform duration-300 ease-out group-hover:text-accent dark:group-hover:text-accent" href="story-details-5.html">التفاصيل <i class="fas fa-arrow-left text-sm align-middle transform group-hover:-rotate-45 transition-transform"></i></a>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg-refined story-card-hover group flex flex-col overflow-hidden animate-on-scroll filtering-transition" data-category="نجاح العميل" data-date="2023-06-19" data-summary="شهد أكثر من 50 من رواد الأعمال المحليين نموًا كبيرًا في أعمالهم بعد المشاركة في برنامج الإرشاد الخاص بنا على مدار 6 أشهر." data-title="تنمية الأعمال الصغيرة من خلال الإرشاد">
+<div class="relative">
+<img alt="صاحب شركة صغيرة يبتسم بثقة في متجره، وهو مثال على النجاح من خلال الإرشاد." class="rounded-t-xl w-full h-48 object-cover lazy-image" data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHRGYYaQX_d8RcldclWfUmAc36tHZzQjrk5A1O-y4AkPD3Axq8YR8ftoBOc-IAjQXY5UaSu8QNEthM2kmHOusI4oczvNn9xhmSBsUAcqf2cP5vLcFkErzbCBpL3wT8lWlAVM3JdG2MlX1aG-7RGVq4N-wpamFLM70kCpLTuiMX0aMO9HZkKqzBCy8_ZjWuVkEVErZl2quH-a3mP-W0dQgqLN3kO2m57b1cqk0d7pJqU8taxFjOG2f05bEHuUXuUlEecohkhs49bu6V" loading="lazy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-300 group-hover:from-black/80"></div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-3">
+<span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-yellow-900/50 dark:text-yellow-300">نجاح العميل</span>
+<p class="text-sm text-gray-500 dark:text-gray-400">19 يونيو 2023</p>
+</div>
+<h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-accent dark:group-hover:text-accent transition-colors flex-grow">تنمية الأعمال الصغيرة من خلال الإرشاد</h4>
+<p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed mb-4">شهد أكثر من 50 من رواد الأعمال المحليين نموًا كبيرًا في أعمالهم بعد المشاركة في برنامج الإرشاد الخاص بنا على مدار 6 أشهر.</p>
+<a class="mt-auto text-primary dark:text-green-300 font-semibold text-sm hover:underline self-start group-hover:translate-x-1 transition-transform duration-300 ease-out group-hover:text-accent dark:group-hover:text-accent" href="story-details-6.html">التفاصيل <i class="fas fa-arrow-left text-sm align-middle transform group-hover:-rotate-45 transition-transform"></i></a>
+</div>
+</div>
+<div class="col-span-full hidden text-center py-16 transition-all duration-500" id="no-results">
+<div class="flex flex-col items-center justify-center space-y-4">
+<i class="fas fa-leaf text-5xl text-accent icon-pulse"></i>
+<h3 class="text-2xl font-bold text-primary dark:text-green-300">لم يتم العثور على قصص</h3>
+<p class="text-gray-600 dark:text-gray-400 font-sans max-w-md">عذراً، لم نتمكن من العثور على أي قصص نجاح تطابق الفلاتر الحالية. يرجى محاولة تعديل بحثك أو إعادة تعيين الفلاتر.</p>
+<p class="text-sm text-gray-500 dark:text-gray-500">منظمة ريف</p>
+</div>
+</div>
+</div>
+<div class="mt-10 pt-6 text-center animate-on-scroll">
+<button class="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-primary text-white text-base font-semibold hover:bg-primary/90 transition-all duration-300 transform active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark">
+<i class="fas fa-sync-alt mr-2"></i>
+                    تحميل المزيد
+                  </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+<div class="fixed bottom-5 right-5 bg-primary text-white p-4 rounded-lg shadow-2xl-refined flex items-center gap-3 z-50 transition-all duration-300" style="display: none;" x-show="showNotification" x-transition:enter="transform ease-out duration-300" x-transition:enter-end="opacity-100 translate-y-0" x-transition:enter-start="opacity-0 translate-y-4" x-transition:leave="transform ease-in duration-300" x-transition:leave-end="opacity-0 translate-y-4" x-transition:leave-start="opacity-100 translate-y-0">
+<i class="fas fa-check-circle text-accent"></i>
+<p class="font-sans text-sm">تمت إعادة تعيين الفلاتر</p>
+</div>
+<a class="fixed bottom-5 left-5 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-accent text-primary shadow-2xl-refined transition-all duration-300 hover:bg-accent/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 dark:focus-visible:ring-offset-background-dark transform hover:scale-110 active:scale-95" href="#page-top" style="display: none;" x-show="showBackToTop" x-transition:enter="transition ease-out duration-300" x-transition:enter-end="opacity-100 transform translate-y-0" x-transition:enter-start="opacity-0 transform translate-y-4" x-transition:leave="transition ease-in duration-300" x-transition:leave-end="opacity-0 transform translate-y-4" x-transition:leave-start="opacity-100 transform translate-y-0">
+<i class="fas fa-arrow-up text-lg"></i>
+</a>
+</div>
+<script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script>
+    function filterStories(categoryFilter, dateFilter, searchTerm) {
+        const storiesGrid = document.getElementById('stories-grid');
+        const storyCards = storiesGrid.querySelectorAll('.filtering-transition');
+        const noResults = document.getElementById('no-results');
+        const lowerCaseSearchTerm = searchTerm.toLowerCase();
+        let visibleCount = 0;
+        storyCards.forEach(card => {
+            const category = card.dataset.category;
+            const title = card.dataset.title.toLowerCase();
+            const summary = card.dataset.summary.toLowerCase();
+            const date = new Date(card.dataset.date);
+            const categoryMatch = categoryFilter === 'كل الفئات' || category === categoryFilter;
+            const searchMatch = title.includes(lowerCaseSearchTerm) || summary.includes(lowerCaseSearchTerm);
+            let dateMatch = false;
+            if (dateFilter === 'كل الأوقات') {
+                dateMatch = true;
+            } else {
+                const now = new Date();
+                let pastDate;
+                if (dateFilter === 'آخر شهر') {
+                    pastDate = new Date().setMonth(now.getMonth() - 1);
+                } else if (dateFilter === 'آخر 3 أشهر') {
+                    pastDate = new Date().setMonth(now.getMonth() - 3);
+                } else if (dateFilter === 'آخر سنة') {
+                    pastDate = new Date().setFullYear(now.getFullYear() - 1);
+                }
+                dateMatch = date >= pastDate;
+            }
+            if (categoryMatch && searchMatch && dateMatch) {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(10px)';
+                setTimeout(() => {
+                    card.classList.remove('hidden');
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 10);
+                visibleCount++;
+            } else {
+                 card.style.opacity = '0';
+                 card.style.transform = 'translateY(-10px)';
+                 setTimeout(() => {
+                    card.classList.add('hidden');
+                 }, 500);
+            }
+        });
+        setTimeout(() => {
+            if (visibleCount === 0) {
+                if (noResults.classList.contains('hidden')) {
+                    noResults.classList.remove('hidden', 'no-results-leave-active', 'no-results-leave');
+                    noResults.classList.add('no-results-enter');
+                    requestAnimationFrame(() => {
+                         noResults.classList.add('no-results-enter-active');
+                    });
+                }
+            } else {
+                 if (!noResults.classList.contains('hidden')) {
+                    noResults.classList.remove('no-results-enter-active', 'no-results-enter');
+                    noResults.classList.add('no-results-leave');
+                    requestAnimationFrame(() => {
+                         noResults.classList.add('no-results-leave-active');
+                         setTimeout(() => {
+                            noResults.classList.add('hidden');
+                         }, 500);
+                    });
+                }
+            }
+        }, 500);
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+        // Preloader
+        const preloader = document.getElementById('preloader');
+        window.addEventListener('load', () => {
+            preloader.classList.add('preloader-fade-out');
+        });
+        // Lazy load images
+        const lazyImages = document.querySelectorAll('.lazy-image');
+        const lazyImageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const lazyImage = entry.target;
+                    lazyImage.src = lazyImage.dataset.src;
+                    lazyImage.classList.remove('lazy-image');
+                    lazyImageObserver.unobserve(lazyImage);
+                }
+            });
+        });
+        lazyImages.forEach(lazyImage => {
+            lazyImageObserver.observe(lazyImage);
+        });
+        // Fade up on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        const elements = document.querySelectorAll('.animate-on-scroll');
+        elements.forEach(el => observer.observe(el));
     });
-}
-    const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-});
-
 </script>
-
-</body>
-</html>
-
+</body></html>
